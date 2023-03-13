@@ -1,5 +1,5 @@
 
-package api;
+package apps;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the api package. 
+ * generated in the apps package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -23,18 +23,26 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: api
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: apps
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link Hai }
+     * Create an instance of {@link apps.Hai }
      * 
      */
-    public Hai createHai() {
-        return new Hai();
+    public apps.Hai createHai() {
+        return new apps.Hai();
+    }
+
+    /**
+     * Create an instance of {@link apps.ListHai }
+     * 
+     */
+    public apps.ListHai createListHai() {
+        return new apps.ListHai();
     }
 
 }

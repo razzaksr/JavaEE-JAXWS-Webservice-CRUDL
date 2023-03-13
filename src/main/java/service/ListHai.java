@@ -10,7 +10,6 @@ import java.util.ArrayList;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@XmlRootElement
 public class ListHai {
     private ArrayList<Hai> list=new ArrayList<>();
 }

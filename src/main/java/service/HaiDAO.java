@@ -28,7 +28,7 @@ public class HaiDAO {
     public ListHai every(){
         ListHai listHai=new ListHai();
         try {
-            query="select * hai";
+            query="select * from hai";
             preparedStatement= connection.prepareStatement(query);
             resultSet=preparedStatement.executeQuery();
             while(resultSet.next()){

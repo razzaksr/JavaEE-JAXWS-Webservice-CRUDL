@@ -1,5 +1,5 @@
-package testws.api;
 
+package apps;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -68,8 +68,8 @@ public class MyServiceService
      *     returns MyService
      */
     @WebEndpoint(name = "MyServicePort")
-    public api.MyService getMyServicePort() {
-        return super.getPort(new QName("http://service/", "MyServicePort"), api.MyService.class);
+    public apps.MyService getMyServicePort() {
+        return super.getPort(new QName("http://service/", "MyServicePort"), apps.MyService.class);
     }
 
     /**
@@ -80,8 +80,8 @@ public class MyServiceService
      *     returns MyService
      */
     @WebEndpoint(name = "MyServicePort")
-    public api.MyService getMyServicePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://service/", "MyServicePort"), api.MyService.class, features);
+    public apps.MyService getMyServicePort(WebServiceFeature... features) {
+        return super.getPort(new QName("http://service/", "MyServicePort"), apps.MyService.class, features);
     }
 
     private static URL __getWsdlLocation() {

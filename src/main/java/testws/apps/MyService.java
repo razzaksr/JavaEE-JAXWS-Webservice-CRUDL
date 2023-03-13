@@ -1,5 +1,5 @@
 
-package api;
+package apps;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -19,7 +19,7 @@ import javax.xml.ws.Action;
 @WebService(name = "MyService", targetNamespace = "http://service/")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 @XmlSeeAlso({
-    api.ObjectFactory.class
+    apps.ObjectFactory.class
 })
 public interface MyService {
 
@@ -35,6 +35,16 @@ public interface MyService {
     @Action(input = "http://service/MyService/createRequest", output = "http://service/MyService/createResponse")
     public String create(
         @WebParam(name = "Hai", partName = "Hai")
-        api.Hai hai);
+        apps.Hai hai);
+
+    /**
+     * 
+     * @return
+     *     returns apps.ListHai
+     */
+    @WebMethod
+    @WebResult(name = "ListHai", partName = "ListHai")
+    @Action(input = "http://service/MyService/listRequest", output = "http://service/MyService/listResponse")
+    public apps.ListHai list();
 
 }
